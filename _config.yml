@@ -1,9 +1,9 @@
 remote_theme: "codeasashu/hcz-jekyll-blog"
 title: blog
 description: My Personal Blog
-author: John Smith
+author: lucky
 logo: /hcz-jekyll-blog/static/img/avatar.png
-github: https://github.com/codeasashu
+github: https://github.com/luckylsx
 about: developer
 
 baseurl: ""
