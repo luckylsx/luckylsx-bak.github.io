@@ -1,10 +1,9 @@
-remote_theme: "codeasashu/hcz-jekyll-blog"
-title: blog
+title: John Smith
 description: My Personal Blog
-author: lucky
-logo: /luckylsx.github.io/static/img/avatar.jpg
-github: https://github.com/luckylsx
-about: developer
+author: John Smith
+logo: /hcz-jekyll-blog/static/img/avatar.png
+github: https://github.com/codeasashu
+about: Freelance developer
 
 baseurl: ""
 url: ""
@@ -27,5 +26,3 @@ per_page: 20
 paginate_path: "/page:num/"
 markdown: kramdown
 gems: [jekyll-paginate, jekyll-gist]
-
-theme: jekyll-theme-cayman
