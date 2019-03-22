@@ -11,12 +11,12 @@
     "icon": "fa-terminal"
   },
   {
-    "text": "Php",
+    "text": "PHP",
     "url": "/php/",
     "icon": "fa-cc-stripe"
   },
   {
-    "text": "Mysql",
+    "text": "MySQL",
     "url": "/mysql/",
     "icon": "fa-bar-chart"
   },
