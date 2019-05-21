@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: categories
 title: Example content for posts  
 categories: others
 ---
