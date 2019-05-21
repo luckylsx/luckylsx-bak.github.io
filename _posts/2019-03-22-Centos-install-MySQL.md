@@ -68,4 +68,4 @@ $ mysql> exit
 ## 安装完成
 至此，使用Yum方法在CentOS7中安装MySQL5.7数据库完毕。可以使用新的root密码登陆MySQL了。
 
-[原文链接](https://webtatic.com/tags/mysql/)
+[[原文链接](https://webtatic.com/tags/mysql/)]

@@ -1,242 +1,151 @@
-/**
- * Site header
- */
-.site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+// media queries
+$media-query-min: 19rem;
+$media-query-med-1: 27rem;
+$media-query-med-2: 35rem;
+$media-query-max: 50rem;
+$media-query-max-extra: 80rem;
 
-    // Positioning context for the mobile navigation icon
-    position: relative;
+/*************************************************************************
+                          VERTICAL-RHYTHM
+/*************************************************************************/
+
+/* Use only multiples of these values for setting puddings and margins. This
+ * will keep vertical rhythm between elements. */
+
+$l-h-baseline: $l-h-default * 0.5;
+$l-h-baseline-double: $l-h-default;
+$l-h-baseline-half: $l-h-default * 0.25;
+
+
+
+/*************************************************************************
+                             DISPLAY
+/*************************************************************************/
+
+//---------------------------INLINE-BLOCK
+
+.tags,
+.tags li {
+  display: inline-block;
 }
 
-.site-title {
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-
-    &,
-    &:visited {
-        color: $grey-color-dark;
-    }
+//---------------------------BLOCK
+img,
+#footer-quote p:before,
+.contact-form input
+{
+  display: block;
 }
 
-.site-nav {
-    float: right;
-    line-height: 56px;
+//---------------------------NONE
 
-    .menu-icon {
-        display: none;
-    }
+.sep {
+  display: none;
 
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
+}
 
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
+/*************************************************************************
+                                WIDTH-HEIGHT
+/*************************************************************************/
 
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
+#footer-quote p:before {
+  width: $l-h-baseline-half * 5;
+  height: $l-h-baseline-half * 5;
+}
 
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
+/*************************************************************************
+                                HEIGHT
+/*************************************************************************/
 
-            > svg {
-                width: 18px;
-                height: 15px;
+.fancy-nav:before,
+.fancy-nav:after {
+  height: 2px;
+}
 
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
+/*************************************************************************
+                                WIDTH
+/*************************************************************************/
 
-        .trigger {
-            clear: both;
-            display: none;
-        }
+//----------------------------MAX-WIDTH
 
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
+article,
+#footer-quote {
+  max-width: $media-query-med-2;
+}
 
-        .page-link {
-            display: block;
-            padding: 5px 10px;
+.paginator ul,
+#main-nav {
+  max-width: $media-query-min * 0.5;
+}
 
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
-        }
-    }
+//----------------------------MIN-WIDTH
+
+#wrapper {
+  min-width: $media-query-min;
 }
 
 
-
-/**
- * Site footer
- */
-.site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+//----------------------------WIDTH=100%
+main img,
+.fancy-nav:before,
+.fancy-nav:after,
+.contact-form textarea {
+  width: 100%;
 }
 
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
+.contact-form input[type="submit"] {
+  width: $l-h-baseline-double * 4;
 }
 
-.contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
+/*************************************************************************
+                                POSITION
+/*************************************************************************/
+
+//----------------------------RELATIVE
+
+#main-nav li,
+.paginator li {
+  position: relative;
 }
 
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
+//----------------------------ABSOLUTE
+
+.fancy-nav:before,
+.fancy-nav:after {
+  position: absolute;
 }
 
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+/*************************************************************************
+                                LEFT
+/*************************************************************************/
+
+//----------------------------LEFT=0
+.fancy-nav:before,
+.fancy-nav:after {
+  left: 0;
 }
 
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+/*************************************************************************
+                                RIGHT
+/*************************************************************************/
+
+
+/*************************************************************************
+                                TOP
+/*************************************************************************/
+
+//----------------------------TOP=0
+.fancy-nav:before {
+  top: 0;
 }
 
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
+/*************************************************************************
+                                BOTTOM
+/*************************************************************************/
 
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
-}
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
+//----------------------------BOTTOM=0
+.fancy-nav:after {
+  bottom: 0;
 }
 
 
-
-/**
- * Page content
- */
-.page-content {
-    padding: $spacing-unit 0;
-}
-
-.page-heading {
-    font-size: 20px;
-}
-
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
-}
-
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
-
-.post-link {
-    display: block;
-    font-size: 24px;
-}
-
-
-
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
-
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
-
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
-}
